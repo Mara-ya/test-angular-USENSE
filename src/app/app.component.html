@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="password-container">
+    <label for="password">Password: </label>
+    <input type="password" [(ngModel)]="password" (input)="checkPasswordStrength()">
+  </div>
+  
+  <div class="check-password">
+    <h4>Password Strength:</h4>
+    <div class="check-password__section" [ngStyle]="{ 'background-color': strengthColor(0) }">
+      <p>Easy</p>
+    </div>
+    <div class="check-password__section" [ngStyle]="{ 'background-color': strengthColor(1) }">
+      <p>Medium</p>
+    </div>
+    <div class="check-password__section" [ngStyle]="{ 'background-color': strengthColor(2) }">
+      <p>Strong</p>
+    </div>
+  </div>
+</div>
